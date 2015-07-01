@@ -1,0 +1,258 @@
+/* Variables */
+/* Reset CSS */
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+/* Import Fonts */
+@font-face {
+  font-family: 'KelsonLight-Light';
+  src: url('fonts/kelson_sans_light-webfont.eot');
+  src: url('fonts/kelson_sans_light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/kelson_sans_light-webfont.woff2') format('woff2'), url('fonts/kelson_sans_light-webfont.woff') format('woff'), url('fonts/kelson_sans_light-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'KelsonRegular';
+  src: url('fonts/kelson_sans_regular-webfont.eot');
+  src: url('fonts/kelson_sans_regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/kelson_sans_regular-webfont.woff2') format('woff2'), url('fonts/kelson_sans_regular-webfont.woff') format('woff'), url('fonts/kelson_sans_regular-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'KelsonBold-Bold';
+  src: url('fonts/kelson_sans_bold-webfont.eot');
+  src: url('fonts/kelson_sans_bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/kelson_sans_bold-webfont.woff2') format('woff2'), url('fonts/kelson_sans_bold-webfont.woff') format('woff'), url('fonts/kelson_sans_bold-webfont.ttf') format('truetype');
+}
+/* Common */
+body {
+  font-family: 'KelsonLight-Light', Helvetica, sans-serif;
+  font-size: 1em;
+  background-color: #000000;
+}
+.fullscreen {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+}
+/* Fixed Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+header nav {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+header nav ul {
+  list-style: none;
+}
+header nav ul li {
+  display: inline-block;
+  height: 50px;
+  padding: 0 20px;
+  line-height: 50px;
+}
+header nav ul li a {
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Home */
+#home {
+  background-image: url("../images/homeBG.jpg");
+  background-size: cover;
+}
+#home .yellowCorner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 404px;
+  height: 404px;
+  background: url("../images/yellowCorner.png") no-repeat;
+}
+#home .blueCorner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 676px;
+  height: 415px;
+  background: url("../images/blueCorner.png") no-repeat;
+}
+#home h1 {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 50px;
+  margin: -45px 0 0 -300px;
+  color: #ffffff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: 30px;
+}
+#home h2 {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 50px;
+  margin: 15px 0 0 -300px;
+  color: #ffffff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 5px;
+}
+.fullscreen {
+  border-top: 1px solid #000000;
+}
+.fullscreen .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.fullscreen .content h1 {
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  top: 120px;
+  font-size: 2.5em;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+.fullscreen .content .text {
+  color: #ffffff;
+}
+.fullscreen .content .middlePos {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  width: 400px;
+  margin-left: -150px;
+}
