@@ -59,10 +59,21 @@ function smoothScroll(eID) {
     }
 }
 
+/* Function de décalage du text pour un visuel en losange */
+function skewX(){
+    var skewElements = document.querySelectorAll('.skewX');
+    for (var i = 0; i < skewElements.length; i++) {
+        var span = skewElements[i].querySelectorAll('span');
+        for (var j = 0; j < span.length; j++) {
+            span[j].style.marginLeft = j * 24 +"px";
+        }
+    }
+}
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
     fullscreen();
-
+    skewX();
     window.addEventListener('resize', fullscreen, false);
 });

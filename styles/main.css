@@ -148,7 +148,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 99;
   width: 100%;
   height: 50px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -227,11 +227,62 @@ header nav ul li a {
   font-size: 1.5em;
   letter-spacing: 5px;
 }
+/* About */
+#about .yellowCorner {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 445px;
+  height: 100%;
+  background: url("../images/yellowCorner2.png") no-repeat;
+}
+#about .yellowCorner2 {
+  position: absolute;
+  z-index: 0;
+  right: -30px;
+  top: 0;
+  width: 1379px;
+  height: 100%;
+  opacity: 0.7;
+  background: url("../images/yellowCorner3.png") no-repeat;
+}
+#about .blueCorner {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  width: 876px;
+  height: 100%;
+  background: url("../images/blueCorner2.png") no-repeat;
+}
+#about .whiteBar {
+  position: absolute;
+  z-index: 3;
+  right: 698px;
+  top: 60px;
+  width: 190px;
+  height: 4px;
+  background: #ffffff;
+  transform: rotate(-45deg);
+}
+#about .whiteBar2 {
+  position: absolute;
+  z-index: 3;
+  right: 356px;
+  top: 460px;
+  width: 120px;
+  height: 4px;
+  background: #ffffff;
+  transform: rotate(45deg);
+}
 .fullscreen {
-  border-top: 1px solid #000000;
+  border-top: 1px solid #ffffff;
+  overflow: hidden;
 }
 .fullscreen .content {
   position: relative;
+  z-index: 20;
   width: 100%;
   height: 100%;
   max-width: 1024px;
@@ -240,19 +291,64 @@ header nav ul li a {
 .fullscreen .content h1 {
   position: absolute;
   z-index: 10;
-  right: 20px;
-  top: 120px;
   font-size: 2.5em;
   color: #ffffff;
   letter-spacing: 2px;
 }
+.fullscreen .content h1.right {
+  right: 20px;
+  top: 120px;
+}
+.fullscreen .content h1.left {
+  left: 20px;
+  top: 120px;
+}
 .fullscreen .content .text {
   color: #ffffff;
+}
+.fullscreen .content .text span {
+  float: left;
+  clear: both;
 }
 .fullscreen .content .middlePos {
   position: absolute;
   left: 50%;
   top: 60%;
   width: 400px;
-  margin-left: -150px;
+  margin-left: -40px;
+}
+.fullscreen .content .square {
+  position: absolute;
+  z-index: 20;
+  left: 180px;
+  top: 200px;
+  width: 280px;
+  height: 280px;
+  border: 1px solid white;
+  transform: rotate(45deg);
+}
+.fullscreen .content .square img {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  width: 200px;
+  transform: rotate(-45deg);
+}
+.fullscreen .content .download-btn {
+  position: absolute;
+  z-index: 20;
+  left: 260px;
+  top: 564px;
+  width: 120px;
+  height: 120px;
+  border: 1px solid white;
+  transform: rotate(45deg);
+}
+.fullscreen .content .download-btn span {
+  position: absolute;
+  top: 45px;
+  left: 30px;
+  transform: rotate(-45deg);
+  color: white;
+  cursor: pointer;
 }
