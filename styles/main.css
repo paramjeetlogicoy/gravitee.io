@@ -276,6 +276,141 @@ header nav ul li a {
   background: #ffffff;
   transform: rotate(45deg);
 }
+/* Get Started */
+#getstarted .yellowCorner {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 445px;
+  height: 100%;
+  background: url("../images/yellowCorner2.png") no-repeat;
+}
+#getstarted .yellowCorner2 {
+  position: absolute;
+  z-index: 0;
+  right: -30px;
+  top: 0;
+  width: 1379px;
+  height: 100%;
+  opacity: 0.7;
+  background: url("../images/yellowCorner3.png") no-repeat;
+}
+#getstarted .blueCorner {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  width: 876px;
+  height: 100%;
+  background: url("../images/blueCorner2.png") no-repeat;
+}
+#getstarted .whiteBar {
+  position: absolute;
+  z-index: 3;
+  right: 698px;
+  top: 60px;
+  width: 190px;
+  height: 4px;
+  background: #ffffff;
+  transform: rotate(-45deg);
+}
+#getstarted .whiteBar2 {
+  position: absolute;
+  z-index: 3;
+  right: 356px;
+  top: 460px;
+  width: 120px;
+  height: 4px;
+  background: #ffffff;
+  transform: rotate(45deg);
+}
+.desc {
+  width: 45%;
+}
+.desc .circle {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+  color: #0b2842;
+  font-family: 'KelsonRegular', Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+.desc .title {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  font-family: 'KelsonRegular', Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+.desc p {
+  float: left;
+  clear: both;
+  margin-left: 50px;
+  font-size: 0.825em;
+}
+.code {
+  height: 60px!important;
+  width: 360px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  line-height: 60px;
+  text-align: center;
+  color: #0b2842;
+}
+.stepOne {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  height: 100px;
+  margin-top: -200px;
+}
+.stepOne.code {
+  right: 50px;
+  left: auto;
+  margin-top: -180px;
+}
+.stepTwo {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  height: 100px;
+  margin-top: -90px;
+}
+.stepTwo.code {
+  right: 50px;
+  left: auto;
+  margin-top: -70px;
+}
+.stepThree {
+  position: absolute;
+  top: 50%;
+  left: 65px
+  height:100px;
+  margin-top: 20px;
+}
+.stepThree.code {
+  right: 50px;
+  left: auto;
+  margin-top: 40px;
+}
+.stepFour {
+  position: absolute;
+  top: 50%;
+  left: 105px;
+  height: 100px;
+  margin-top: 130px;
+}
+.stepFour.code {
+  right: 50px;
+  left: auto;
+  margin-top: 150px;
+}
 .fullscreen {
   border-top: 1px solid #ffffff;
   overflow: hidden;
@@ -287,6 +422,7 @@ header nav ul li a {
   height: 100%;
   max-width: 1024px;
   margin: 0 auto;
+  color: #ffffff;
 }
 .fullscreen .content h1 {
   position: absolute;
