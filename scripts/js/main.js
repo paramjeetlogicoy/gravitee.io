@@ -68,6 +68,14 @@ function skewX(){
             span[j].style.marginLeft = j * 24 +"px";
         }
     }
+
+    var skewElements2 = document.querySelectorAll('.skew-X');
+    for (var i = 0; i < skewElements2.length; i++) {
+        var span = skewElements2[i].querySelectorAll('span');
+        for (var j = 0; j < span.length; j++) {
+            span[j].style.marginLeft = j * -24 +"px";
+        }
+    }
 }
 
 
