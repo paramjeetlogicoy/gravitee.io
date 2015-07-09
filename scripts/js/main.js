@@ -24,7 +24,6 @@ function currentYPosition() {
 }
 
 function elmYPosition(eID) {
-    console.log(eID);
     var elm = document.getElementById(eID);
     var y = elm.offsetTop;
     var node = elm;
@@ -42,7 +41,6 @@ function smoothScroll(eID) {
         scrollTo(0, stopY); return;
     }
     var speed = Math.round(distance / 4);
-    console.log(speed);
     if (speed >= 8) speed = 8;
     var step = Math.round(distance / 25);
     var leapY = stopY > startY ? startY + step : startY - step;
@@ -66,6 +64,14 @@ function skewX(){
         var span = skewElements[i].querySelectorAll('span');
         for (var j = 0; j < span.length; j++) {
             span[j].style.marginLeft = j * 24 +"px";
+        }
+    }
+
+    var skewElements2 = document.querySelectorAll('.skew-X');
+    for (var i = 0; i < skewElements2.length; i++) {
+        var span = skewElements2[i].querySelectorAll('span');
+        for (var j = 0; j < span.length; j++) {
+            span[j].style.marginLeft = j * -24 +"px";
         }
     }
 }

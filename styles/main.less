@@ -70,7 +70,7 @@ a img {
         url('fonts/kelson_sans_regular-webfont.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'KelsonBold-Bold';
+  font-family: 'KelsonBold';
   src: url('fonts/kelson_sans_bold-webfont.eot');
   src:  url('fonts/kelson_sans_bold-webfont.eot?#iefix') format('embedded-opentype'),
         url('fonts/kelson_sans_bold-webfont.woff2') format('woff2'),
@@ -207,8 +207,8 @@ header{
   }
 }
 
-/* Get Started */
-#getstarted{
+/* Features */
+#features{
   .yellowCorner{
     position:absolute; z-index: 1;
     left:0; top:0;
@@ -218,22 +218,57 @@ header{
 
   .yellowCorner2{
     position:absolute; z-index: 0;
-    right:-30px; top:0;
-    width:1379px; height:100%;
+    right:0px; bottom:0;
+    width:1129px; height:100%;
     opacity: 0.7;
-    background:url("../images/yellowCorner3.png") no-repeat;
+    background:url("../images/yellowCorner4.png") no-repeat;
   }
 
   .blueCorner{
     position:absolute; z-index: 2;
     right:0; bottom:0;
-    width: 876px; height:100%;
-    background:url("../images/blueCorner2.png") no-repeat;
+    width: 723px; height:100%;
+    background:url("../images/blueCorner3.png") no-repeat;
+  }
+}
+.features-img{
+  position:absolute;
+  top:50%; left:50px;
+  width:350px; height:350px;
+  margin-top: -150px;
+
+  img{
+    width:100%;
+  }
+}
+
+/* Get Started */
+#getstarted{
+  .yellowCorner{
+    position:absolute; z-index: 1;
+    left:0; top:0;
+    width:685px; height:100%;
+    background:url("../images/yellowCorner5.png") no-repeat;
+  }
+
+  .yellowCorner2{
+    position:absolute; z-index: 0;
+    right:0px; bottom:0;
+    width:1129px; height:100%;
+    opacity: 0.7;
+    background:url("../images/yellowCorner4.png") no-repeat;
+  }
+
+  .blueCorner{
+    position:absolute; z-index: 2;
+    right:0; bottom:0;
+    width: 723px; height:100%;
+    background:url("../images/blueCorner3.png") no-repeat;
   }
 
   .whiteBar{
     position:absolute; z-index: 3;
-    right:698px; top:60px;
+    left:529px; top:60px;
     width: 190px; height:4px;
     background: @witheColor;
     transform: rotate(-45deg);
@@ -241,7 +276,7 @@ header{
 
   .whiteBar2{
     position:absolute; z-index: 3;
-    right:356px; top:460px;
+    right:430px; top:690px;
     width: 120px; height:4px;
     background: @witheColor;
     transform: rotate(45deg);
@@ -323,6 +358,73 @@ header{
   }
 }
 
+/* Download */
+#download{
+  .left-section{
+    left:50%; top:260px;
+    margin-left: -500px;
+  }
+
+  .right-section{
+    right:50%; top:260px;
+    margin-right: -500px;
+  }
+
+  .dl-section{
+    position:absolute;
+    width:450px;
+    text-align: center;
+
+    span{
+      float:left;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .title{
+      font-family: 'KelsonBold', Helvetica, sans-serif;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .btn{
+      display:block;
+      clear:both;
+      width:220px; height:60px;
+      background-color:rgba(255,255,255,0.5);
+      border:1px solid @witheColor; border-radius:6px;
+      margin:30px auto 0;
+
+      &.dl-btn{
+        background-image: url("../images/dl-btn.png");
+        background-position: 150px center;
+        background-repeat: no-repeat;
+      }
+
+      &.github-btn{
+        background-image: url("../images/github-btn.png");
+        background-position: 150px center;
+        background-repeat: no-repeat;
+      }
+
+      span{
+        float:left;
+        width:160px; height:30px;
+        text-align: center;
+        margin-bottom: 0;
+        line-height: 30px;
+        font-size: 2em; color:@witheColor;
+
+        &.dl{
+          font-size: 1.2em;
+          font-family: 'KelsonBold', Helvetica, sans-serif;
+        }
+      }
+    }
+  }
+}
+
 .fullscreen{
   border-top:1px solid @witheColor; overflow: hidden;
 
@@ -375,6 +477,13 @@ header{
         width:200px;
         transform: rotate(-45deg);
       }
+    }
+
+    .leftPos{
+      position: absolute;
+      left: 50%; top: 35%;
+      width: 400px;
+      margin-left: 200px;
     }
 
     .download-btn{
