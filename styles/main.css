@@ -1,4 +1,23 @@
 /* Variables */
+/* CSS Gradients */
+.yellowGradient {
+  background: #010201;
+  background: -moz-linear-gradient(top, #010201 0%, #787612 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #010201), color-stop(100%, #787612));
+  background: -webkit-linear-gradient(top, #010201 0%, #787612 100%);
+  background: -o-linear-gradient(top, #010201 0%, #787612 100%);
+  background: -ms-linear-gradient(top, #010201 0%, #787612 100%);
+  background: linear-gradient(to bottom, #010201 0%, #787612 100%);
+}
+.blueGradient {
+  background: #010201;
+  background: -moz-linear-gradient(top, #010201 0%, #124778 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #010201), color-stop(100%, #124778));
+  background: -webkit-linear-gradient(top, #010201 0%, #124778 100%);
+  background: -o-linear-gradient(top, #010201 0%, #124778 100%);
+  background: -ms-linear-gradient(top, #010201 0%, #124778 100%);
+  background: linear-gradient(to bottom, #010201 0%, #124778 100%);
+}
 /* Reset CSS */
 html,
 body {
@@ -183,19 +202,21 @@ header nav ul li a {
 }
 #home .yellowCorner {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 404px;
-  height: 404px;
-  background: url("../images/yellowCorner.png") no-repeat;
+  left: -260px;
+  bottom: -50px;
+  width: 800px;
+  height: 260px;
+  opacity: 0.5;
+  transform: rotate(-135deg);
 }
 #home .blueCorner {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 676px;
-  height: 415px;
-  background: url("../images/blueCorner.png") no-repeat;
+  right: -150px;
+  bottom: -270px;
+  width: 430px;
+  height: 625px;
+  opacity: 0.5;
+  transform: rotate(45deg);
 }
 #home h1 {
   display: block;
@@ -511,6 +532,160 @@ header nav ul li a {
 #download .dl-section .btn span.dl {
   font-size: 1.2em;
   font-family: 'KelsonBold', Helvetica, sans-serif;
+}
+/* Contact */
+#contact .left-section {
+  position: absolute;
+  width: 450px;
+  left: 50%;
+  top: 260px;
+  margin-left: -500px;
+}
+#contact .left-section .field {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 45px;
+  /* active state */
+  /* active state */
+  /* ANIMATIONS */
+}
+#contact .left-section .field.message {
+  margin-top: 30px;
+}
+#contact .left-section .field textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 0px 10px 5px;
+  border: none;
+  border-radius: 0 !important;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 20px;
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid #757575;
+  color: #ffffff;
+}
+#contact .left-section .field input {
+  font-size: 18px;
+  padding: 10px 0px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #757575;
+  color: #ffffff;
+}
+#contact .left-section .field input:focus {
+  outline: none;
+}
+#contact .left-section .field label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+#contact .left-section .field label.top-unfocus {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: -20px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+#contact .left-section .field input:focus ~ label,
+#contact .left-section .field input:valid ~ label,
+#contact .left-section .field textarea:focus ~ label,
+#contact .left-section .field textarea:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+#contact .left-section .field .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+#contact .left-section .field .bar:before,
+#contact .left-section .field .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  z-index: 2;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+#contact .left-section .field .bar:before {
+  left: 50%;
+}
+#contact .left-section .field .bar:after {
+  right: 50%;
+}
+#contact .left-section .field input:focus ~ .bar:before,
+#contact .left-section .field input:focus ~ .bar:after,
+#contact .left-section .field textarea:focus ~ .bar:before,
+#contact .left-section .field textarea:focus ~ .bar:after {
+  width: 50%;
+}
+#contact .left-section .field input:focus ~ .highlight,
+#contact .left-section .field textarea:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+#contact .right-section {
+  position: absolute;
+  width: 450px;
+  right: 50%;
+  top: 260px;
+  margin-right: -500px;
+}
+#contact h2 {
+  font-size: 1.5em;
+  letter-spacing: 5px;
+  margin-bottom: 50px;
 }
 .fullscreen {
   border-top: 1px solid #ffffff;

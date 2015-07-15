@@ -3,6 +3,27 @@
 @dark: #000000;
 @darkBlue: #0B2842;
 
+/* CSS Gradients */
+.yellowGradient{
+  background: #010201;
+  background: -moz-linear-gradient(top, #010201 0%, #787612 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#010201), color-stop(100%,#787612));
+  background: -webkit-linear-gradient(top, #010201 0%,#787612 100%);
+  background: -o-linear-gradient(top, #010201 0%,#787612 100%);
+  background: -ms-linear-gradient(top, #010201 0%,#787612 100%);
+  background: linear-gradient(to bottom, #010201 0%,#787612 100%);
+}
+
+.blueGradient{
+  background: #010201;
+  background: -moz-linear-gradient(top, #010201 0%, #124778 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#010201), color-stop(100%,#124778));
+  background: -webkit-linear-gradient(top, #010201 0%,#124778 100%);
+  background: -o-linear-gradient(top, #010201 0%,#124778 100%);
+  background: -ms-linear-gradient(top, #010201 0%,#124778 100%);
+  background: linear-gradient(to bottom, #010201 0%,#124778 100%);
+}
+
 /* Reset CSS */
 html, body {
   border: 0;
@@ -131,16 +152,18 @@ header{
 
   .yellowCorner{
     position:absolute;
-    left:0; bottom:0;
-    width:404px; height:404px;
-    background:url("../images/yellowCorner.png") no-repeat;
+    left: -260px; bottom: -50px;
+    width: 800px; height: 260px;
+    opacity: 0.5;
+    transform: rotate(-135deg);
   }
 
   .blueCorner{
-    position:absolute;
-    right:0; bottom:0;
-    width:676px; height:415px;
-    background:url("../images/blueCorner.png") no-repeat;
+    position: absolute;
+    right: -150px; bottom: -270px;
+    width: 430px; height: 625px;
+    opacity: 0.5;
+    transform: rotate(45deg);
   }
 
   h1{
@@ -423,6 +446,154 @@ header{
       }
     }
   }
+}
+
+/* Contact */
+#contact{
+  .left-section{
+    position: absolute;
+    width:450px;
+    left:50%; top:260px;
+    margin-left: -500px;
+
+    .field{
+      position: relative;
+      float:left;
+      width:100%;
+      margin-bottom:45px;
+
+      &.message{
+        margin-top: 30px;
+      }
+
+      textarea{
+        display: block;
+        width: 100%;
+        padding:10px 0px 10px 5px;
+        border: none;
+        border-radius: 0 !important;
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 20px;
+        background-color: transparent;
+        box-shadow: none;
+        border-bottom: 1px solid #757575;
+        color:@witheColor;
+      }
+
+      input{
+        font-size:18px;
+        padding:10px 0px 10px 5px;
+        display:block;
+        width:100%;
+        border:none;
+        background:none;
+        border-bottom:1px solid #757575;
+        color:@witheColor;
+      }
+
+      input:focus{
+        outline:none;
+      }
+
+      label{
+        color:#999;
+        font-size:18px;
+        font-weight:normal;
+        position:absolute;
+        pointer-events:none;
+        left:5px;
+        top:10px;
+        transition:0.2s ease all;
+        -moz-transition:0.2s ease all;
+        -webkit-transition:0.2s ease all;
+      }
+
+      label.top-unfocus{
+        color:#999;
+        font-size:18px;
+        font-weight:normal;
+        position:absolute;
+        pointer-events:none;
+        left:5px;
+        top:-20px;
+        transition:0.2s ease all;
+        -moz-transition:0.2s ease all;
+        -webkit-transition:0.2s ease all;
+      }
+
+      input:focus ~ label, input:valid ~ label , textarea:focus ~ label, textarea:valid ~ label	{
+        top:-20px;
+        font-size:14px;
+        color:#5264AE;
+      }
+
+      .bar{
+        position:relative;
+        display:block;
+        width:100%;
+      }
+
+      .bar:before, .bar:after 	{
+        content:'';
+        height:2px;
+        width:0;
+        bottom:0px;
+        position:absolute;
+        z-index: 2;
+        background:#5264AE;
+        transition:0.2s ease all;
+        -moz-transition:0.2s ease all;
+        -webkit-transition:0.2s ease all;
+      }
+      .bar:before {
+        left:50%;
+      }
+      .bar:after {
+        right:50%;
+      }
+
+      /* active state */
+      input:focus ~ .bar:before, input:focus ~ .bar:after, textarea:focus ~ .bar:before, textarea:focus ~ .bar:after{
+        width:50%;
+      }
+
+      /* active state */
+      input:focus ~ .highlight, textarea:focus ~ .highlight {
+        -webkit-animation:inputHighlighter 0.3s ease;
+        -moz-animation:inputHighlighter 0.3s ease;
+        animation:inputHighlighter 0.3s ease;
+      }
+
+      /* ANIMATIONS */
+      @-webkit-keyframes inputHighlighter {
+        from { background:#5264AE; }
+        to 	{ width:0; background:transparent; }
+      }
+      @-moz-keyframes inputHighlighter {
+        from { background:#5264AE; }
+        to 	{ width:0; background:transparent; }
+      }
+      @keyframes inputHighlighter {
+        from { background:#5264AE; }
+        to 	{ width:0; background:transparent; }
+      }
+
+    }
+  }
+
+  .right-section{
+    position: absolute;
+    width:450px;
+    right:50%; top:260px;
+    margin-right: -500px;
+  }
+
+  h2{
+    font-size: 1.5em; letter-spacing: 5px; margin-bottom: 50px;
+  }
+
+
 }
 
 .fullscreen{
