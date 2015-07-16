@@ -251,31 +251,32 @@ header nav ul li a {
 /* About */
 #about .yellowCorner {
   position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 445px;
-  height: 100%;
-  background: url("../images/yellowCorner2.png") no-repeat;
+  left: -400px;
+  bottom: 150px;
+  width: 800px;
+  height: 550px;
+  opacity: 0.4;
+  transform: rotate(-135deg);
 }
 #about .yellowCorner2 {
   position: absolute;
   z-index: 0;
-  right: -30px;
-  top: 0;
-  width: 1379px;
-  height: 100%;
-  opacity: 0.7;
-  background: url("../images/yellowCorner3.png") no-repeat;
+  right: 310px;
+  top: -450px;
+  width: 510px;
+  height: 1300px;
+  opacity: 0.4;
+  transform: rotate(-135deg);
 }
 #about .blueCorner {
   position: absolute;
   z-index: 2;
-  right: 0;
-  bottom: 0;
-  width: 876px;
-  height: 100%;
-  background: url("../images/blueCorner2.png") no-repeat;
+  right: -473px;
+  top: -100px;
+  width: 1350px;
+  height: 640px;
+  opacity: 0.6;
+  transform: rotate(45deg);
 }
 #about .whiteBar {
   position: absolute;
@@ -301,30 +302,32 @@ header nav ul li a {
 #features .yellowCorner {
   position: absolute;
   z-index: 1;
-  left: 0;
+  left: -308px;
   top: 0;
-  width: 445px;
-  height: 100%;
-  background: url("../images/yellowCorner2.png") no-repeat;
+  width: 900px;
+  height: 290px;
+  opacity: 0.4;
+  transform: rotate(-45deg);
 }
 #features .yellowCorner2 {
   position: absolute;
   z-index: 0;
-  right: 0px;
-  bottom: 0;
-  width: 1129px;
-  height: 100%;
-  opacity: 0.7;
-  background: url("../images/yellowCorner4.png") no-repeat;
+  right: -30px;
+  bottom: -130px;
+  width: 839px;
+  height: 1300px;
+  opacity: 0.4;
+  transform: rotate(-45deg);
 }
 #features .blueCorner {
   position: absolute;
   z-index: 2;
-  right: 0;
-  bottom: 0;
-  width: 723px;
-  height: 100%;
-  background: url("../images/blueCorner3.png") no-repeat;
+  right: -300px;
+  top: 0;
+  width: 950px;
+  height: 560px;
+  opacity: 0.6;
+  transform: rotate(135deg);
 }
 .features-img {
   position: absolute;
@@ -340,37 +343,38 @@ header nav ul li a {
 /* Get Started */
 #getstarted .yellowCorner {
   position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 685px;
-  height: 100%;
-  background: url("../images/yellowCorner5.png") no-repeat;
+  left: -400px;
+  bottom: 150px;
+  width: 800px;
+  height: 550px;
+  opacity: 0.4;
+  transform: rotate(-135deg);
 }
 #getstarted .yellowCorner2 {
   position: absolute;
   z-index: 0;
-  right: 0px;
-  bottom: 0;
-  width: 1129px;
-  height: 100%;
-  opacity: 0.7;
-  background: url("../images/yellowCorner4.png") no-repeat;
+  right: 310px;
+  top: -450px;
+  width: 510px;
+  height: 1300px;
+  opacity: 0.4;
+  transform: rotate(-135deg);
 }
 #getstarted .blueCorner {
   position: absolute;
   z-index: 2;
-  right: 0;
-  bottom: 0;
-  width: 723px;
-  height: 100%;
-  background: url("../images/blueCorner3.png") no-repeat;
+  right: -473px;
+  top: -100px;
+  width: 1350px;
+  height: 640px;
+  opacity: 0.6;
+  transform: rotate(45deg);
 }
 #getstarted .whiteBar {
   position: absolute;
   z-index: 3;
   left: 529px;
-  top: 60px;
+  top: 82px;
   width: 190px;
   height: 4px;
   background: #ffffff;
@@ -379,7 +383,7 @@ header nav ul li a {
 #getstarted .whiteBar2 {
   position: absolute;
   z-index: 3;
-  right: 430px;
+  right: 125px;
   top: 690px;
   width: 120px;
   height: 4px;
@@ -686,6 +690,10 @@ header nav ul li a {
   font-size: 1.5em;
   letter-spacing: 5px;
   margin-bottom: 50px;
+}
+#contact .fa-id {
+  margin-left: 10px;
+  font-size: 1.2em;
 }
 .fullscreen {
   border-top: 1px solid #ffffff;
