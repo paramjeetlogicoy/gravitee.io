@@ -16,13 +16,16 @@
 
     <body>
         <header>
+            <div class="logo">
+              Emplacelement du logo
+            </div>
             <nav>
                 <ul>
-                    <li><a onclick="smoothScroll('about')">/ About</a></li>
-                    <li><a onclick="smoothScroll('features')">/ Features</a></li>
-                    <li><a onclick="smoothScroll('getstarted')">/ Get Started</a></li>
-                    <li><a onclick="smoothScroll('download')">/ Download</a></li>
-                    <li><a onclick="smoothScroll('contact')">/ Contact</a></li>
+                    <li><a onclick="smoothScroll('about')">About</a></li>
+                    <li><a onclick="smoothScroll('features')">Features</a></li>
+                    <li><a onclick="smoothScroll('getstarted')">Get Started</a></li>
+                    <li><a onclick="smoothScroll('download')">Download</a></li>
+                    <li><a onclick="smoothScroll('contact')">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -31,17 +34,13 @@
         <section id="home" class="fullscreen">
             <h1>GRAVITEE.IO</h1>
             <h2>Open Source API Management Solution</h2>
-            <div class="yellowCorner yellowGradient"></div>
-            <div class="blueCorner blueGradient"></div>
         </section>
         <!-- End : Home Section -->
 
         <!-- Start : About Section -->
-        <section id="about" class="fullscreen">
+        <section id="about" class="section">
             <div class="content">
-                <div class="slideFromRight">
-                    <h1 class="right">/ About Gravitee.io</h1>
-                </div>
+                <h1>About Gravitee.io</h1>
                 <div class="text fade slideFromLeft skewX middlePos">
                     <span>Lorem ipsum dolor ammet</span>
                     <span>Lorem ipsum dolor ammet</span>
@@ -59,20 +58,19 @@
                     </div>
                 </div>
             </div>
-            <div class="yellowCorner yellowGradient"></div>
+            <!--<div class="yellowCorner yellowGradient"></div>
             <div class="yellowCorner2 yellowGradient"></div>
             <div class="blueCorner blueGradient"></div>
             <div class="whiteBar"></div>
-            <div class="whiteBar2"></div>
+            <div class="whiteBar2"></div>-->
         </section>
         <!-- End : About Section -->
 
         <!-- Start : Features Section -->
-        <section id="features" class="fullscreen">
+        <section id="features" class="section">
             <div class="content">
-                <div class="slideFromRight">
-                    <h1 class="left">/ Features</h1>
-                </div>
+                <h1>Gravitee.io Features</h1>
+
                 <div class="text fade slideFromLeft skew-X leftPos">
                     <span>Lorem ipsum dolor ammet</span>
                     <span>Lorem ipsum dolor ammet</span>
@@ -87,20 +85,18 @@
                     </div>
                 </div>
             </div>
-            <div class="yellowCorner yellowGradient"></div>
+            <!--<div class="yellowCorner yellowGradient"></div>
             <div class="yellowCorner2 yellowGradient"></div>
             <div class="blueCorner blueGradient"></div>
             <div class="whiteBar"></div>
-            <div class="whiteBar2"></div>
+            <div class="whiteBar2"></div>-->
         </section>
         <!-- End : Features Section -->
 
         <!-- Start : Get Started Section -->
-        <section id="getstarted" class="fullscreen">
+        <section id="getstarted" class="section">
             <div class="content">
-                <div class="slideFromRight">
-                    <h1 class="right">/ Get started</h1>
-                </div>
+                <h1>Get started</h1>
 
                 <div class="stepOne desc">
                     <span class="circle">1</span>
@@ -138,16 +134,16 @@
                     $ git clone https://github.com/gravitee-io/gateway.git
                 </div>
             </div>
-            <div class="yellowCorner yellowGradient"></div>
+            <!--<div class="yellowCorner yellowGradient"></div>
             <div class="yellowCorner2 yellowGradient"></div>
             <div class="blueCorner blueGradient"></div>
             <div class="whiteBar"></div>
-            <div class="whiteBar2"></div>
+            <div class="whiteBar2"></div>-->
         </section>
         <!-- End : Get Started Section -->
 
         <!-- Start : Get Started Section -->
-        <section id="download" class="fullscreen">
+        <section id="download" class="section">
             <div class="content">
                 <div class="slideFromRight">
                     <h1 class="left">/ Download</h1>
@@ -170,23 +166,23 @@
                     </a>
                 </div>
             </div>
-            <div class="yellowCorner yellowGradient"></div>
+            <!--<div class="yellowCorner yellowGradient"></div>
             <div class="yellowCorner2 yellowGradient"></div>
             <div class="blueCorner blueGradient"></div>
             <div class="whiteBar"></div>
-            <div class="whiteBar2"></div>
+            <div class="whiteBar2"></div>-->
         </section>
         <!-- End : Get Started Section -->
 
         <!-- Start : Get Started Section -->
-        <section id="contact" class="fullscreen">
+        <section id="contact" class="section">
             <div class="content">
                 <div class="slideFromRight">
                     <h1 class="right">/ Contact</h1>
                 </div>
                 <div class="contact-form left-section">
                     <h2>Contact Us</h2>
-                    <form action="">
+                    <div>
                         <div class="field">
                             <input type="text" name="name" id="name" required/>
                             <span class="bar"></span>
@@ -203,7 +199,10 @@
                             <span class="bar"></span>
                             <label class="top-unfocus">Message</label>
                         </div>
-                    </form>
+                        <div class="field">
+                            <button class="sendMail" onclick="sendMail()">Send</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="right-section">
                     <h2>Follow Us</h2>
@@ -212,11 +211,11 @@
                     </div>
                 </div>
             </div>
-            <div class="yellowCorner"></div>
+            <!--<div class="yellowCorner"></div>
             <div class="yellowCorner2"></div>
             <div class="blueCorner"></div>
             <div class="whiteBar"></div>
-            <div class="whiteBar2"></div>
+            <div class="whiteBar2"></div>-->
         </section>
         <!-- End : Get Started Section -->
 

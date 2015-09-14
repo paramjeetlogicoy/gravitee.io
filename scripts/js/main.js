@@ -77,6 +77,25 @@ function skewX(){
 }
 
 
+function sendMail(){
+    var from, name, message;
+
+    var url = "http://localhost:3000/send"
+
+    from = document.getElementById('mail').value;
+    name = document.getElementById('name').value;
+    message = document.getElementById("message").value;
+
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function (data) {
+        if (httpRequest.readyState != 4 || httpRequest.status != 200) return;
+        alert("Success: " + httpRequest.responseText);
+    }
+    httpRequest.open('GET', url);
+    httpRequest.send({name:name,from:from,text:message});
+}
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     fullscreen();
