@@ -674,3 +674,5 @@ Error: listen EADDRINUSE
     at Object.Module._extensions..js (module.js:478:10)
     at Module.load (module.js:355:32)
     at Function.Module._load (module.js:310:12)
+Express Started on Port 3000
+Express Started on Port 3000
