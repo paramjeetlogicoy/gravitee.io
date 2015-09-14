@@ -659,3 +659,18 @@ Error: listen EADDRINUSE
     at Function.Module._load (module.js:310:12)
 Express Started on Port 3000
 Express Started on Port 3000
+Express Started on Port 3000
+events.js:85
+      throw er; // Unhandled 'error' event
+            ^
+Error: listen EADDRINUSE
+    at exports._errnoException (util.js:746:11)
+    at Server._listen2 (net.js:1156:14)
+    at listen (net.js:1182:10)
+    at Server.listen (net.js:1267:5)
+    at Function.app.listen (/Users/nicolasfourre/Documents/Gravitee.io/www/node_modules/express/lib/application.js:525:24)
+    at Object.<anonymous> (/Users/nicolasfourre/Documents/Gravitee.io/www/mailer/server.js:47:5)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)

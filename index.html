@@ -1,225 +1,583 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <!-- BASICS -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Gravitee.io</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css"/>
-        <link rel="stylesheet" href="styles/main.css"/>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Gravitee.io - Open Source Api Management</title>
+	<!-- core CSS -->
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/font-awesome.min.css" rel="stylesheet">
+    <link href="styles/animate.min.css" rel="stylesheet">
+    <link href="styles/owl.carousel.css" rel="stylesheet">
+    <link href="styles/owl.transitions.css" rel="stylesheet">
+    <link href="styles/prettyPhoto.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
 
-    <body>
-        <header>
-            <div class="logo">
-              Emplacelement du logo
-            </div>
-            <nav>
-                <ul>
-                    <li><a onclick="smoothScroll('about')">About</a></li>
-                    <li><a onclick="smoothScroll('features')">Features</a></li>
-                    <li><a onclick="smoothScroll('getstarted')">Get Started</a></li>
-                    <li><a onclick="smoothScroll('download')">Download</a></li>
-                    <li><a onclick="smoothScroll('contact')">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+<body id="home" class="homepage">
 
-        <!-- Start : Home Section -->
-        <section id="home" class="fullscreen">
-            <h1>GRAVITEE.IO</h1>
-            <h2>Open Source API Management Solution</h2>
-        </section>
-        <!-- End : Home Section -->
-
-        <!-- Start : About Section -->
-        <section id="about" class="section">
-            <div class="content">
-                <h1>About Gravitee.io</h1>
-                <div class="text fade slideFromLeft skewX middlePos">
-                    <span>Lorem ipsum dolor ammet</span>
-                    <span>Lorem ipsum dolor ammet</span>
-                    <span>Lorem ipsum dolor ammet</span>
-                    <span>Lorem ipsum dolor ammet</span>
-                    <span>Lorem ipsum dolor ammet</span>
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/gravitee/gravitee-io-white.png" alt="logo"> Gravitee</a>
                 </div>
 
-                <div class="media left">
-                    <div class="square">
-                        <img src="images/gravitee-io-white.png" alt="Gravitee.io"/>
-                    </div>
-                    <div class="download-btn">
-                        <span>Download</span>
-                    </div>
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="#home">Home</a></li>
+                        <li class="scroll"><a href="#features">Features</a></li>
+                        <li class="scroll"><a href="#about">About</a></li>
+                        <!--<li class="scroll"><a href="#pricing">Pricing</a></li>-->
+                        <li class="scroll"><a href="#documentation">Documentation</a></li>
+                        <li class="scroll"><a href="#get-in-touch">Contact</a></li>
+                    </ul>
                 </div>
-            </div>
-            <!--<div class="yellowCorner yellowGradient"></div>
-            <div class="yellowCorner2 yellowGradient"></div>
-            <div class="blueCorner blueGradient"></div>
-            <div class="whiteBar"></div>
-            <div class="whiteBar2"></div>-->
-        </section>
-        <!-- End : About Section -->
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
 
-        <!-- Start : Features Section -->
-        <section id="features" class="section">
-            <div class="content">
-                <h1>Gravitee.io Features</h1>
+    <section id="main-slider">
+      <div class="slider-inner">
+        <h1>GRAVITEE.IO</h1>
+        <h2><span>Open Source</span> API Management Solution</h2>
+      </div>
+      <img src="images/gravitee/homeBG2.jpg" alt="" />
+    </section><!--/#main-slider-->
 
-                <div class="text fade slideFromLeft skew-X leftPos">
-                    <span>Lorem ipsum dolor ammet</span>
-                    <span>Lorem ipsum dolor ammet</span>
-                    <span>Lorem ipsum dolor ammet</span>
-                    <span>Lorem ipsum dolor ammet</span>
-                    <span>Lorem ipsum dolor ammet</span>
+    <section id="cta" class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>Short description</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
                 </div>
-
-                <div class="media left">
-                    <div class="features-img">
-                        <img src="images/features.png" alt="Gravitee.io Features"/>
-                    </div>
+                <div class="col-sm-3 text-right">
+                    <a class="btn btn-primary btn-lg" href="#">Download Now!</a>
                 </div>
             </div>
-            <!--<div class="yellowCorner yellowGradient"></div>
-            <div class="yellowCorner2 yellowGradient"></div>
-            <div class="blueCorner blueGradient"></div>
-            <div class="whiteBar"></div>
-            <div class="whiteBar2"></div>-->
-        </section>
-        <!-- End : Features Section -->
+        </div>
+    </section><!--/#cta-->
 
-        <!-- Start : Get Started Section -->
-        <section id="getstarted" class="section">
-            <div class="content">
-                <h1>Get started</h1>
-
-                <div class="stepOne desc">
-                    <span class="circle">1</span>
-                    <span class="title">Download Gravitee</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt non diam et euismod. Aenean semper, sem vitae commodo lobortis, nibh dui interdum mauris, ac dignissim ligula odio ut enim.</p>
-                </div>
-                <div class="code stepOne">
-                    $ git clone https://github.com/gravitee-io/gateway.git
-                </div>
-
-                <div class="stepTwo desc">
-                    <span class="circle">2</span>
-                    <span class="title">Install Gravitee</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt non diam et euismod. Aenean semper, sem vitae commodo lobortis, nibh dui interdum mauris, ac dignissim ligula odio ut enim.</p>
-                </div>
-                <div class="code stepTwo">
-                    $ git clone https://github.com/gravitee-io/gateway.git
-                </div>
-
-                <div class="stepThree desc">
-                    <span class="circle">3</span>
-                    <span class="title">Declare your API in Gravitee</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt non diam et euismod. Aenean semper, sem vitae commodo lobortis, nibh dui interdum mauris, ac dignissim ligula odio ut enim.</p>
-                </div>
-                <div class="code stepThree">
-                    $ git clone https://github.com/gravitee-io/gateway.git
-                </div>
-
-                <div class="stepFour desc">
-                    <span class="circle">4</span>
-                    <span class="title">Make your first request</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt non diam et euismod. Aenean semper, sem vitae commodo lobortis, nibh dui interdum mauris, ac dignissim ligula odio ut enim.</p>
-                </div>
-                <div class="code stepFour">
-                    $ git clone https://github.com/gravitee-io/gateway.git
-                </div>
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Gravitee Features</h2>
+                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
-            <!--<div class="yellowCorner yellowGradient"></div>
-            <div class="yellowCorner2 yellowGradient"></div>
-            <div class="blueCorner blueGradient"></div>
-            <div class="whiteBar"></div>
-            <div class="whiteBar2"></div>-->
-        </section>
-        <!-- End : Get Started Section -->
-
-        <!-- Start : Get Started Section -->
-        <section id="download" class="section">
-            <div class="content">
-                <div class="slideFromRight">
-                    <h1 class="left">/ Download</h1>
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <img class="img-responsive" src="images/main-feature.png" alt="">
                 </div>
-                <div class="dl-section left-section">
-                    <span class="title">Use</span>
-                    <span>Big Download Button</span>
-                    <a class="btn dl-btn" href="/">
-                        <span class="dl">Download</span>
-                        <span>Gravitee</span>
-                    </a>
-                </div>
-
-                <div class="dl-section right-section">
-                    <span class="title">Follow us</span>
-                    <span>On Github</span>
-                    <a class="btn github-btn" href="/">
-                        <span class="dl">Github</span>
-                        <span>Gravitee</span>
-                    </a>
-                </div>
-            </div>
-            <!--<div class="yellowCorner yellowGradient"></div>
-            <div class="yellowCorner2 yellowGradient"></div>
-            <div class="blueCorner blueGradient"></div>
-            <div class="whiteBar"></div>
-            <div class="whiteBar2"></div>-->
-        </section>
-        <!-- End : Get Started Section -->
-
-        <!-- Start : Get Started Section -->
-        <section id="contact" class="section">
-            <div class="content">
-                <div class="slideFromRight">
-                    <h1 class="right">/ Contact</h1>
-                </div>
-                <div class="contact-form left-section">
-                    <h2>Contact Us</h2>
-                    <div>
-                        <div class="field">
-                            <input type="text" name="name" id="name" required/>
-                            <span class="bar"></span>
-                            <label>Full Name</label>
-
+                <div class="col-sm-6">
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-lock"></i>
                         </div>
-                        <div class="field">
-                            <input type="text" name="mail" id="mail" required/>
-                            <span class="bar"></span>
-                            <label>Mail Adress</label>
+                        <div class="media-body">
+                            <h4 class="media-heading">User identifiaction</h4>
+                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
                         </div>
-                        <div class="field message">
-                            <textarea name="message" id="message" rows="3" required></textarea>
-                            <span class="bar"></span>
-                            <label class="top-unfocus">Message</label>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-bar-chart"></i>
                         </div>
-                        <div class="field">
-                            <button class="sendMail" onclick="sendMail()">Send</button>
+                        <div class="media-body">
+                            <h4 class="media-heading">Rate limiting</h4>
+                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Activity reporting</h4>
+                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-bullhorn"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Over Quota Alerting</h4>
+                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
                         </div>
                     </div>
                 </div>
-                <div class="right-section">
-                    <h2>Follow Us</h2>
-                    <div class="field">
-                        <span class="fa fa-twitter fa-2x"></span><span class="fa-id">@GraviteeIO</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>OPEN SOURCE</span> API MANAGEMENT SOLUTION</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Mauris pretium auctor quam. Vestibulum et nunc id nisi fringilla <br />iaculis. Mauris pretium auctor quam.</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Free Download</a></p>
+                <img class="img-responsive wow fadeIn" src="images/cta2/cta2-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms" />
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="about">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">About Us</h2>
+                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 wow fadeInUp">
+                    <h3 class="column-title">Multi Capability</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="nostyle">
+                                <li><i class="fa fa-check-square"></i> Ipsum is simply dummy</li>
+                                <li><i class="fa fa-check-square"></i> When an unknown</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <ul class="nostyle">
+                                <li><i class="fa fa-check-square"></i> The printing and typesetting</li>
+                                <li><i class="fa fa-check-square"></i> Lorem Ipsum has been</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary" href="#">Learn More</a>
+
+                </div>
+            </div>
+        </div>
+    </section><!--/#about-->
+
+    <section id="work-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Installation Process</h2>
+                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="icon-circle">
+                            <span>1</span>
+                            <i class="fa fa-download fa-2x"></i>
+                        </div>
+                        <h3>DOWNLOAD</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="icon-circle">
+                            <span>2</span>
+                            <i class="fa fa-folder-open-o fa-2x"></i>
+                        </div>
+                        <h3>INSTALL</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="icon-circle">
+                            <span>3</span>
+                            <i class="fa fa-database fa-2x"></i>
+                        </div>
+                        <h3>RUN DOCKER</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <div class="icon-circle">
+                            <span>4</span>
+                            <i class="fa fa-edit  fa-2x"></i>
+                        </div>
+                        <h3>DECLARE YOUR API</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
+                        <div class="icon-circle">
+                            <span>5</span>
+                            <i class="fa fa-thumbs-o-up fa-2x"></i>
+                        </div>
+                        <h3>WELL DONE</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms">
+                        <div class="icon-circle">
+                            <span>6</span>
+                            <i class="fa fa-space-shuttle fa-2x"></i>
+                        </div>
+                        <h3>LAUNCH</h3>
                     </div>
                 </div>
             </div>
-            <!--<div class="yellowCorner"></div>
-            <div class="yellowCorner2"></div>
-            <div class="blueCorner"></div>
-            <div class="whiteBar"></div>
-            <div class="whiteBar2"></div>-->
-        </section>
-        <!-- End : Get Started Section -->
+        </div>
+    </section><!--/#work-process-->
 
-        <script src="scripts/js/main.js"></script>
-    </body>
+    <!--<section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Pricing Table</h2>
+                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
 
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <ul class="pricing">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        $39
+                                    </span>
+                                    <span class="duration">
+                                        per month
+                                    </span>
+                                </div>
+
+                                <div class="plan-name">
+                                    Starter
+                                </div>
+                            </li>
+                            <li><strong>1</strong> DOMAIN</li>
+                            <li><strong>100GB</strong> DISK SPACE</li>
+                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
+                            <li>SHARED SSL CERTIFICATE</li>
+                            <li><strong>10</strong> EMAIL ADDRESS</li>
+                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <ul class="pricing featured">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        $69
+                                    </span>
+                                    <span class="duration">
+                                        per month
+                                    </span>
+                                </div>
+
+                                <div class="plan-name">
+                                    Business
+                                </div>
+                            </li>
+                            <li><strong>3</strong> DOMAIN</li>
+                            <li><strong>300GB</strong> DISK SPACE</li>
+                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
+                            <li>SHARED SSL CERTIFICATE</li>
+                            <li><strong>30</strong> EMAIL ADDRESS</li>
+                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li class="plan-purchase"><a class="btn btn-default" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="400ms">
+                        <ul class="pricing">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        $99
+                                    </span>
+                                    <span class="duration">
+                                        per month
+                                    </span>
+                                </div>
+
+                                <div class="plan-name">
+                                    Pro
+                                </div>
+                            </li>
+                            <li><strong>5</strong> DOMAIN</li>
+                            <li><strong>500GB</strong> DISK SPACE</li>
+                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
+                            <li>SHARED SSL CERTIFICATE</li>
+                            <li><strong>50</strong> EMAIL ADDRESS</li>
+                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="600ms">
+                        <ul class="pricing">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        $199
+                                    </span>
+                                    <span class="duration">
+                                        per month
+                                    </span>
+                                </div>
+
+                                <div class="plan-name">
+                                    Ultra
+                                </div>
+                            </li>
+                            <li><strong>10</strong> DOMAIN</li>
+                            <li><strong>1000GB</strong> DISK SPACE</li>
+                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
+                            <li>SHARED SSL CERTIFICATE</li>
+                            <li><strong>100</strong> EMAIL ADDRESS</li>
+                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>--><!--/#pricing-->
+
+    <section id="documentation">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Documentation</h2>
+                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+
+            <p class="wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="200ms" style="visibility: visible; animation-duration: 300ms; animation-delay: 200ms; animation-name: fadeInUp;"><a class="btn btn-primary btn-lg" href="#">Go to documentation</a></p>
+
+            <!--<div class="row">
+                <div class="col-sm-6">
+                    <div class="blog-post blog-large wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <article>
+                            <header class="entry-header">
+                                <div class="entry-thumbnail">
+                                    <img class="img-responsive" src="images/blog/01.jpg" alt="">
+                                    <span class="post-format post-format-video"><i class="fa fa-film"></i></span>
+                                </div>
+                                <div class="entry-date">25 November 2014</div>
+                                <h2 class="entry-title"><a href="#">While now the fated Pequod had been so long afloat this</a></h2>
+                            </header>
+
+                            <div class="entry-content">
+                                <P>With a blow from the top-maul Ahab knocked off the steel head of the lance, and then handing to the mate the long iron rod remaining, bade him hold it upright, without its touching off the steel head of the lance, and then handing to the mate the long iron rod remaining. without its touching off the steel without its touching off the steel</P>
+                                <a class="btn btn-primary" href="#">Read More</a>
+                            </div>
+
+                            <footer class="entry-meta">
+                                <span class="entry-author"><i class="fa fa-pencil"></i> <a href="#">Victor</a></span>
+                                <span class="entry-category"><i class="fa fa-folder-o"></i> <a href="#">Tutorial</a></span>
+                                <span class="entry-comments"><i class="fa fa-comments-o"></i> <a href="#">15</a></span>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="blog-post blog-media wow fadeInRight" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <article class="media clearfix">
+                            <div class="entry-thumbnail pull-left">
+                                <img class="img-responsive" src="images/blog/02.jpg" alt="">
+                                <span class="post-format post-format-gallery"><i class="fa fa-image"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <header class="entry-header">
+                                    <div class="entry-date">01 December 2014</div>
+                                    <h2 class="entry-title"><a href="#">BeReviews was a awesome envent in dhaka</a></h2>
+                                </header>
+
+                                <div class="entry-content">
+                                    <P>With a blow from the top-maul Ahab knocked off the steel head of the lance, and then handing to the steel</P>
+                                    <a class="btn btn-primary" href="#">Read More</a>
+                                </div>
+
+                                <footer class="entry-meta">
+                                    <span class="entry-author"><i class="fa fa-pencil"></i> <a href="#">Campbell</a></span>
+                                    <span class="entry-category"><i class="fa fa-folder-o"></i> <a href="#">Tutorial</a></span>
+                                    <span class="entry-comments"><i class="fa fa-comments-o"></i> <a href="#">15</a></span>
+                                </footer>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="blog-post blog-media wow fadeInRight" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <article class="media clearfix">
+                            <div class="entry-thumbnail pull-left">
+                                <img class="img-responsive" src="images/blog/03.jpg" alt="">
+                                <span class="post-format post-format-audio"><i class="fa fa-music"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <header class="entry-header">
+                                    <div class="entry-date">03 November 2014</div>
+                                    <h2 class="entry-title"><a href="#">Play list of old bangle  music and gajal</a></h2>
+                                </header>
+
+                                <div class="entry-content">
+                                    <P>With a blow from the top-maul Ahab knocked off the steel head of the lance, and then handing to the steel</P>
+                                    <a class="btn btn-primary" href="#">Read More</a>
+                                </div>
+
+                                <footer class="entry-meta">
+                                    <span class="entry-author"><i class="fa fa-pencil"></i> <a href="#">Ruth</a></span>
+                                    <span class="entry-category"><i class="fa fa-folder-o"></i> <a href="#">Tutorial</a></span>
+                                    <span class="entry-comments"><i class="fa fa-comments-o"></i> <a href="#">15</a></span>
+                                </footer>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>-->
+
+        </div>
+    </section>
+
+    <section id="animated-number">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">In numbers</h2>
+                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-sm-3 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="animated-number" data-digit="2305" data-duration="1000"></div>
+                        <strong>CUPS OF COFFEE CONSUMED</strong>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="animated-number" data-digit="1231" data-duration="1000"></div>
+                        <strong>CLIENT WORKED WITH</strong>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="animated-number" data-digit="3025" data-duration="1000"></div>
+                        <strong>PROJECT COMPLETED</strong>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <div class="animated-number" data-digit="1199" data-duration="1000"></div>
+                        <strong>QUESTIONS ANSWERED</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#animated-number-->
+
+    <section id="get-in-touch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Get in Touch</h2>
+                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+        </div>
+    </section><!--/#get-in-touch-->
+
+
+    <section id="contact">
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <div class="contact-form">
+                            <h3>Contact Info</h3>
+
+                            <address>
+                              <strong>Twitter, Inc.</strong><br>
+                              795 Folsom Ave, Suite 600<br>
+                              San Francisco, CA 94107<br>
+                              <abbr title="Phone">P:</abbr> (123) 456-7890
+                            </address>
+
+                            <form id="main-contact-form" name="contact-form" method="post" action="#">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" rows="8" placeholder="Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2015 Gravitee.IO. Designed by Nicolas Fourré
+                </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <!--  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="scripts/js/jquery.js"></script>
+    <script src="scripts/js/bootstrap.min.js"></script>
+    <script src="scripts/js/owl.carousel.min.js"></script>
+    <script src="scripts/js/mousescroll.js"></script>
+    <script src="scripts/js/smoothscroll.js"></script>
+    <script src="scripts/js/jquery.prettyPhoto.js"></script>
+    <script src="scripts/js/jquery.isotope.min.js"></script>
+    <script src="scripts/js/jquery.inview.min.js"></script>
+    <script src="scripts/js/wow.min.js"></script>
+    <script src="scripts/js/main.js"></script>
+</body>
 </html>

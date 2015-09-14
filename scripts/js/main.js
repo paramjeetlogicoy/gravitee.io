@@ -1,104 +1,215 @@
-/*
-* Fullscreen Function to adapt section to screen resolution
- */
-function fullscreen(){
-    var screenHeight = window.innerHeight;
-    var fulldiv = document.querySelectorAll('.fullscreen');
-    for (var i = 0; i < fulldiv.length; i++) {
-        fulldiv[i].style.height = screenHeight+"px";
-    }
-}
+jQuery(function($) {'use strict';
 
-/*
-* Smooth Scroll Function
- */
-function currentYPosition() {
-    // Firefox, Chrome, Opera, Safari
-    if (self.pageYOffset) return self.pageYOffset;
-    // Internet Explorer 6 - standards mode
-    if (document.documentElement && document.documentElement.scrollTop)
-        return document.documentElement.scrollTop;
-    // Internet Explorer 6, 7 and 8
-    if (document.body.scrollTop) return document.body.scrollTop;
-    return 0;
-}
+	// Navigation Scroll
+	$(window).scroll(function(event) {
+		Scroll();
+	});
 
-function elmYPosition(eID) {
-    var elm = document.getElementById(eID);
-    var y = elm.offsetTop;
-    var node = elm;
-    while (node.offsetParent && node.offsetParent != document.body) {
-        node = node.offsetParent;
-        y += node.offsetTop;
-    } return y;
-}
+	$('.navbar-collapse ul li a').on('click', function() {
+		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
+		return false;
+	});
 
-function smoothScroll(eID) {
-    var startY = currentYPosition();
-    var stopY = elmYPosition(eID);
-    var distance = stopY > startY ? stopY - startY : startY - stopY;
-    if (distance < 100) {
-        scrollTo(0, stopY); return;
-    }
-    var speed = Math.round(distance / 4);
-    if (speed >= 8) speed = 8;
-    var step = Math.round(distance / 25);
-    var leapY = stopY > startY ? startY + step : startY - step;
-    var timer = 0;
-    if (stopY > startY) {
-        for ( var i=startY; i<stopY; i+=step ) {
-            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-        } return;
-    }
-    for ( var i=startY; i>stopY; i-=step ) {
-        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
-    }
-}
+	// User define function
+	function Scroll() {
+		var contentTop      =   [];
+		var contentBottom   =   [];
+		var winTop      =   $(window).scrollTop();
+		var rangeTop    =   200;
+		var rangeBottom =   500;
+		$('.navbar-collapse').find('.scroll a').each(function(){
+			contentTop.push( $( $(this).attr('href') ).offset().top);
+			contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
+		})
+		$.each( contentTop, function(i){
+			if ( winTop > contentTop[i] - rangeTop ){
+				$('.navbar-collapse li.scroll')
+				.removeClass('active')
+				.eq(i).addClass('active');
+			}
+		})
+	};
 
-/* Function de décalage du text pour un visuel en losange */
-function skewX(){
-    var skewElements = document.querySelectorAll('.skewX');
-    for (var i = 0; i < skewElements.length; i++) {
-        var span = skewElements[i].querySelectorAll('span');
-        for (var j = 0; j < span.length; j++) {
-            span[j].style.marginLeft = j * 24 +"px";
-        }
-    }
+	$('#tohash').on('click', function(){
+		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
+		return false;
+	});
 
-    var skewElements2 = document.querySelectorAll('.skew-X');
-    for (var i = 0; i < skewElements2.length; i++) {
-        var span = skewElements2[i].querySelectorAll('span');
-        for (var j = 0; j < span.length; j++) {
-            span[j].style.marginLeft = j * -24 +"px";
-        }
-    }
-}
+	// accordian
+	$('.accordion-toggle').on('click', function(){
+		$(this).closest('.panel-group').children().each(function(){
+		$(this).find('>.panel-heading').removeClass('active');
+		 });
 
+	 	$(this).closest('.panel-heading').toggleClass('active');
+	});
 
-function sendMail(){
-    var from, name, message;
+	//Slider
+	$(document).ready(function() {
+		var time = 7; // time in seconds
 
-    var url = "http://localhost:3000/send"
+	 	var $progressBar,
+	      $bar,
+	      $elem,
+	      isPause,
+	      tick,
+	      percentTime;
 
-    from = document.getElementById('mail').value;
-    name = document.getElementById('name').value;
-    message = document.getElementById("message").value;
+	    //Init the carousel
+	    $("#main-slider").find('.owl-carousel').owlCarousel({
+	      slideSpeed : 500,
+	      paginationSpeed : 500,
+	      singleItem : true,
+	      navigation : true,
+			navigationText: [
+			"<i class='fa fa-angle-left'></i>",
+			"<i class='fa fa-angle-right'></i>"
+			],
+	      afterInit : progressBar,
+	      afterMove : moved,
+	      startDragging : pauseOnDragging,
+	      //autoHeight : true,
+	      transitionStyle : "fadeUp"
+	    });
 
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function (data) {
-        if (httpRequest.readyState != 4 || httpRequest.status != 200) return;
-        alert("Success: " + httpRequest.responseText);
-    }
-    httpRequest.open('GET', url);
-    httpRequest.send({name:name,from:from,text:message});
-}
+	    //Init progressBar where elem is $("#owl-demo")
+	    function progressBar(elem){
+	      $elem = elem;
+	      //build progress bar elements
+	      buildProgressBar();
+	      //start counting
+	      start();
+	    }
 
+	    //create div#progressBar and div#bar then append to $(".owl-carousel")
+	    function buildProgressBar(){
+	      $progressBar = $("<div>",{
+	        id:"progressBar"
+	      });
+	      $bar = $("<div>",{
+	        id:"bar"
+	      });
+	      $progressBar.append($bar).appendTo($elem);
+	    }
 
+	    function start() {
+	      //reset timer
+	      percentTime = 0;
+	      isPause = false;
+	      //run interval every 0.01 second
+	      tick = setInterval(interval, 10);
+	    };
 
-document.addEventListener('DOMContentLoaded', function() {
-    fullscreen();
-    skewX();
-    window.addEventListener('resize', fullscreen, false);
+	    function interval() {
+	      if(isPause === false){
+	        percentTime += 1 / time;
+	        $bar.css({
+	           width: percentTime+"%"
+	         });
+	        //if percentTime is equal or greater than 100
+	        if(percentTime >= 100){
+	          //slide to next item
+	          $elem.trigger('owl.next')
+	        }
+	      }
+	    }
+
+	    //pause while dragging
+	    function pauseOnDragging(){
+	      isPause = true;
+	    }
+
+	    //moved callback
+	    function moved(){
+	      //clear interval
+	      clearTimeout(tick);
+	      //start again
+	      start();
+	    }
+	});
+
+	//Initiat WOW JS
+	new WOW().init();
+	//smoothScroll
+	smoothScroll.init();
+
+	// portfolio filter
+	$(window).load(function(){'use strict';
+		var $portfolio_selectors = $('.portfolio-filter >li>a');
+		var $portfolio = $('.portfolio-items');
+		$portfolio.isotope({
+			itemSelector : '.portfolio-item',
+			layoutMode : 'fitRows'
+		});
+
+		$portfolio_selectors.on('click', function(){
+			$portfolio_selectors.removeClass('active');
+			$(this).addClass('active');
+			var selector = $(this).attr('data-filter');
+			$portfolio.isotope({ filter: selector });
+			return false;
+		});
+	});
+
+	$(document).ready(function() {
+		//Animated Progress
+		$('.progress-bar').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+			if (visible) {
+				$(this).css('width', $(this).data('width') + '%');
+				$(this).unbind('inview');
+			}
+		});
+
+		//Animated Number
+		$.fn.animateNumbers = function(stop, commas, duration, ease) {
+			return this.each(function() {
+				var $this = $(this);
+				var start = parseInt($this.text().replace(/,/g, ""));
+				commas = (commas === undefined) ? true : commas;
+				$({value: start}).animate({value: stop}, {
+					duration: duration == undefined ? 1000 : duration,
+					easing: ease == undefined ? "swing" : ease,
+					step: function() {
+						$this.text(Math.floor(this.value));
+						if (commas) { $this.text($this.text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")); }
+					},
+					complete: function() {
+						if (parseInt($this.text()) !== stop) {
+							$this.text(stop);
+							if (commas) { $this.text($this.text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")); }
+						}
+					}
+				});
+			});
+		};
+
+		$('.animated-number').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+			var $this = $(this);
+			if (visible) {
+				$this.animateNumbers($this.data('digit'), false, $this.data('duration'));
+				$this.unbind('inview');
+			}
+		});
+	});
+
+	// Contact form
+	var form = $('#main-contact-form');
+	form.submit(function(event){
+		event.preventDefault();
+		var form_status = $('<div class="form_status"></div>');
+		$.ajax({
+			url: $(this).attr('action'),
+			beforeSend: function(){
+				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
+			}
+		}).done(function(data){
+			form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
+		});
+	});
+
+	//Pretty Photo
+	$("a[rel^='prettyPhoto']").prettyPhoto({
+		social_tools: false
+	});
+
 });
