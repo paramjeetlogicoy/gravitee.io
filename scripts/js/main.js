@@ -6,7 +6,10 @@ jQuery(function($) {'use strict';
 	});
 
 	$('.navbar-collapse ul li a').on('click', function() {
-		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
+		var offset = $(this.hash).offset();
+		if (offset) {
+			$('html, body').animate({scrollTop: offset.top - 5}, 1000);
+		}
 		return false;
 	});
 
@@ -18,8 +21,11 @@ jQuery(function($) {'use strict';
 		var rangeTop    =   200;
 		var rangeBottom =   500;
 		$('.navbar-collapse').find('.scroll a').each(function(){
-			contentTop.push( $( $(this).attr('href') ).offset().top);
-			contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
+			var href = $(this).attr('href');
+      if (href.startsWith('#')) {
+				contentTop.push( $( href ).offset().top);
+				contentBottom.push( $( href ).offset().top + $( href ).height() );
+			}
 		})
 		$.each( contentTop, function(i){
 			if ( winTop > contentTop[i] - rangeTop ){
