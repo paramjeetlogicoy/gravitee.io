@@ -9,8 +9,8 @@ jQuery(function($) {'use strict';
 		var offset = $(this.hash).offset();
 		if (offset) {
 			$('html, body').animate({scrollTop: offset.top - 5}, 1000);
+			return false;
 		}
-		return false;
 	});
 
 	// User define function
